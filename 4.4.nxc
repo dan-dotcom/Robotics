@@ -1,0 +1,17 @@
+#define POWER 45
+#define THRESHOLD 40
+
+
+task main() {
+     SetSensorLight(IN_2);
+     while (true) {
+       if (Sensor(IN_2 ) > THRESHOLD){  // on white
+          Off(OUT_B);
+         }
+       else {                           //on black
+       OnFwd(OUT_B,POWER);
+     }
+}
+}
+
+
